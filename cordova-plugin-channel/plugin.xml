@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-channel" version="0.0.2">
+	<name>
+		Channel
+	</name>
+	<description>
+		Cordova Channel Package
+	</description>
+	<license>
+		Apache 2.0
+	</license>
+	<keywords>
+		cordova,channel
+	</keywords>
+	<js-module src="www/channel.js" name="channel">
+		<clobbers target="Channel" />
+	</js-module>
+	<platform name="android">
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="Channel">
+				<param name="android-package" value="com.weilai.channel.Channel" />
+			</feature>
+		</config-file>
+		<source-file src="src/android/Channel.java" target-dir="src/com/weilai/channel" />
+		<source-file src="src/android/packer/PackerNg.java" target-dir="src/com/weilai/channel/packer" />
+		<source-file src="src/android/common/PackerCommon.java" target-dir="src/com/weilai/channel/common" />
+		<source-file src="src/android/common/support/walle/ApkSigningBlock.java" target-dir="src/com/weilai/channel/common/support/walle" />
+		<source-file src="src/android/common/support/walle/ApkSigningPayload.java" target-dir="src/com/weilai/channel/common/support/walle" />
+		<source-file src="src/android/common/support/walle/ApkUtil.java" target-dir="src/com/weilai/channel/common/support/walle" />
+		<source-file src="src/android/common/support/walle/Pair.java" target-dir="src/com/weilai/channel/common/support/walle" />
+		<source-file src="src/android/common/support/walle/PayloadReader.java" target-dir="src/com/weilai/channel/common/support/walle" />
+		<source-file src="src/android/common/support/walle/PayloadWriter.java" target-dir="src/com/weilai/channel/common/support/walle" />
+		<source-file src="src/android/common/support/walle/Support.java" target-dir="src/com/weilai/channel/common/support/walle" />
+		<source-file src="src/android/common/support/walle/V2Const.java" target-dir="src/com/weilai/channel/common/support/walle" />
+		<source-file src="src/android/common/support/walle/V2Utils.java" target-dir="src/com/weilai/channel/common/support/walle" />
+	</platform>
+</plugin>

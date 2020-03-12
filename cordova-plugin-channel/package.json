@@ -1,0 +1,13 @@
+{
+    "version": "0.0.3",
+    "name": "com.weilai.channel.Channel",
+    "cordova_name": "Channel",
+    "description": "A cordova plugin, Channel",
+    "license": "MIT",
+    "keywords": [
+        "channel"
+    ],
+    "platforms": [
+        "android"
+    ]
+}

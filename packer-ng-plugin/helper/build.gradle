@@ -1,0 +1,36 @@
+repositories {
+    mavenCentral()
+    jcenter()
+    google()
+}
+
+apply plugin: 'com.android.library'
+
+dependencies {
+    implementation project(":common")
+}
+
+android {
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+        encoding "UTF-8"
+    }
+
+    compileSdkVersion project.compileSdkVersion
+    buildToolsVersion project.buildToolsVersion
+
+    defaultConfig {
+        versionName project.VERSION_NAME
+        versionCode Integer.parseInt(project.VERSION_CODE)
+        minSdkVersion project.minSdkVersion
+        targetSdkVersion project.targetSdkVersion
+    }
+
+    lintOptions {
+        abortOnError false
+        htmlReport true
+    }
+}
+apply from: '../gradle-mvn-push.gradle'
