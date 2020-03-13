@@ -1,0 +1,6 @@
+java -jar tools/packer-ng-2.0.1.jar generate generate --channels=ch1,ch2,ch3 --output=build/archives   app.apk        命令行设置定制参数
+
+java -jar tools/packer-ng-2.0.1.jar generate --channels=@channels.txt --output=build/archives  app.apk  通过读取文件channels.txt文件获得定制参数列表
+
+
+java -jar tools/packer-ng-2.0.1.jar verify   新的apk.apk      检测是否打包成功
